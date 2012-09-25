@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+  <!-- Richard Lao
+  Introduction to Programming
+  Project 2 - Alone -->
+  <head>
+      <script>
+	          var score=0;
+	          var times_visited_north=0;
+          	var times_visited_south=0;
+          	var times_visited_east=0;
+          	var times_visited_west=0;
+          function btngonorth(){
+            var message="This passage leads you to a locked door.";
+            alert(message);
+               if(times_visited_north>0){
+               times_visited_north=times_visited_north+1;
+               alert("score: "+score);
+               }
+               else{
+                score=score+5;
+                times_visited_north=times_visited_north+1; 
+                alert("score: "+score);             
+               }
+          }
+         function btngosouth(){
+            var message="This passage leads you to a locked door.";
+            alert(message);
+               if(times_visited_south>0){
+               times_visited_south=times_visited_south+1;
+               alert("score: "+score);
+               }
+               else{
+                score=score+5;
+                times_visited_south=times_visited_south+1; 
+                alert("score: "+score);             
+               }
+          }
+         function btngoeast(){
+            var message="This passage leads you no where";
+            alert(message);
+               if(times_visited_east>0){
+               times_visited_north=times_visited_east+1;
+               alert("score: "+score);
+               }
+               else{
+                score=score+5;
+                times_visited_east=times_visited_east+1; 
+                alert("score: "+score);             
+               }
+          }       
+         function btngowest(){
+            var message="This passage leads you to a locked door.";
+            alert(message);
+               if(times_visited_west>0){
+               times_visited_west=times_visited_west+1;
+               alert("score: "+score);
+               }
+               else{
+                score=score+5;
+                times_visited_west=times_visited_west+1; 
+                alert("score: "+score);             
+               }
+          }
+      </script>
+  </head>
+  <body> 
+    <p style="Font-size:200%; color:black;">
+	Alone
+    </p>
+    <textarea rows="10" cols="200">	
+	You wake up in a dark dank room. You see a message that reads: "Run". There are 4 passages to the north, south, east, and west.
+    </textarea>
+    <br>
+    <br>
+    <button type="button" onclick="btngonorth();">
+      Go North
+    </button>
+    <button type="button" onclick="btngosouth();">
+      Go South
+    </button>
+    <button type="button" onclick="btngoeast();">
+      Go East
+    </button>
+    <button type="button" onclick="btngowest();">
+      Go West
+    </button>
+    <br>
+    <br>
+    <br>
+    <button type="button">
+      <a href = "mailto:Richard.Liao1@Marist.edu"> Click this to e-mail me!</a>
+    </button>
+    <button type="button" value=alert(score);>
+       Click this to see your score 
+    </button>
+  </body>
+</html>
