@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+  <!-- Richard Lao
+  Introduction to Programming
+  Project 4 - Alone -->
+  <head>
+  <title> Richard Liao's Project 4</title>
+    <script type ="text/Javascript" src="locations.js"></script>  
+  </head>
+  <body onload="init()"> 
+    <p style="Font-size:200%; color:black;">
+	Alone
+    </p>
+    <textarea rows="20" cols="70" id="taGame">
+    </textarea>
+    <br>
+    <br>
+    <button type="button" onclick="btnGoNorth()" id="north_button">
+      Go North
+    </button>
+    <button type="button" onclick="btnGoSouth()" id="south_button">
+      Go South
+    </button> 
+    <button type="button" onclick="btnGoWest()" id="west_button">
+      Go West
+    </button>
+    <button type="button" onclick="btnGoEast()" id="east_button">
+      Go East
+    </button>
+    <button type="button" onclick="updateText(score)">
+      score
+    </button>
+    <button type="button" onclick="updateText(x)">
+      x-location
+    </button>
+    <button type="button" onclick="updateText(y)">
+      y-location
+    </button>
+    <br>
+    <textarea id=taInput></textarea>
+    <img src=mapfirstfloor.png style="position: absolute; top: 50px; left: 600px;"></img>
+    <button type="button" onclick="btnGoClick()">
+      Go
+    </button>
+    <button type="button" onclick="currentLocation_display()"> Current Location</button>
+    <br>
+    <br>
+    <br>
+    <button type="button">  
+      <a href = "mailto:Richard.Liao1@Marist.edu"> Click this to e-mail me!</a>
+    </button>
+  </body>
+</html>
