@@ -315,7 +315,7 @@
 				score=score+5;
 				currentLocation="treasureRoomTwo";
 			}else if(x===-3 && y===0 && boneThrown===true){
-				var msg=("You see heaps of treasure on the floor");
+				var msg=("You see even more treasure on the floor");
 				updateText(msg);
 				treasureRoomTwo_visited=treasureRoomTwo_visited+1;
 				currentLocation="treasureRoomTwo";
@@ -368,6 +368,7 @@
 			boneThrown=true;
 			var msg=("you take the bone from your backpack and throw it. The hellspawn thing starts gnawing on it. ");
 			updateText(msg);
+			document.getElementById("east_button").disabled=false;
 			inventory[1]="nothing"
 			}
 		}
@@ -379,12 +380,12 @@
 		}
 		//executes the locations depending on x and y coordinates
 		function locationCheck(){
+			skeletonRoom();
 			mossyRoom();
 			blackRoom();
 			torchRoom();
 			hallTwo();
 			emptyRoom();
-			skeletonRoom();
 			darkHall();
 			endRoom();
 			ceilingRoom();
@@ -487,19 +488,20 @@
 							}
 		}
 		//I do not know why this check boundary function is not working.
+		/*
 		function boundariesText(){
-			if(currentLocation != "treasureRoomTwo" 
-			|| currentLocation != "treasureRoom" 
-			|| currentLocation != "blackRoom" 
-			|| currentLocation != "startRoom" 
-			|| currentLocation != "torchRoom" 
-			|| currentLocation != "darkHall" 
-			|| currentLocation != "skeletonRoom" 
-			|| currentLocation != "emptyRoom"
-			|| currentLocation != "hallTwo"
-			|| currentLocation != "ceilingRoom"
-			|| currentLocation != "mossyRoom"
-			|| currentLocation != "skeletonRoom"){
+			if((currentLocation != "treasureRoomTwo") 
+			|| (currentLocation != "treasureRoom") 
+			|| (currentLocation != "blackRoom") 
+			|| (currentLocation != "startRoom") 
+			|| (currentLocation != "torchRoom") 
+			|| (currentLocation != "darkHall") 
+			|| (currentLocation != "skeletonRoom") 
+			|| (currentLocation != "emptyRoom")
+			|| (currentLocation != "hallTwo")
+			|| (currentLocation != "ceilingRoom")
+			|| (currentLocation != "mossyRoom")
+			|| (currentLocation != "skeletonRoom")){
 				var msg=("You walk into a wall and fall unconcious. You wake up in the first room");
 				updateText(msg);
 				x=0;
@@ -508,3 +510,4 @@
 			locationCheck();
 			}
 		}
+		*/
